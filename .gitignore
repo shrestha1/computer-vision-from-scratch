@@ -133,3 +133,6 @@ data/
 
 # model
 *.pth
+
+#tensorboard
+runs/

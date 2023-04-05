@@ -19,11 +19,10 @@ class LeNet(nn.Module):
             
             # layer 4
             nn.AvgPool2d(kernel_size=2, stride=2),
-            nn.Flatten(),
-
+            
             # layer 5
-            nn.Linear(400, 120),
-            nn.ReLU(),
+            nn.Conv2d(in_channels=16, out_channels=120, kernel_size=5),
+            nn.Flatten(),
 
             # layer 6
             nn.Linear(120, 84),

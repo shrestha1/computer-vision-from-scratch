@@ -2,7 +2,7 @@ Beginning with the classification of object using the basic Convolutional networ
 
 ## ToDo:
 - [x] Basic CNN Layer
-- [ ] Lenet 
+- [x] Lenet 
 - [ ] AlexNet
 - [ ] VGG
 - [ ] GoogLeNet

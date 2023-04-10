@@ -42,10 +42,7 @@ class AlexNet(nn.Module):
     def forward(self, x):
         f = self.features(x)      #Extract the features
         f = torch.flatten(f, 1)   #Flatten the tensor
-        return self.fc_layer(f)
-
-
-
+        return self.fc_layer(f)   #return from the last fully connected layer
 
 if __name__=='__main__':
     #data: batch, channel, h, w

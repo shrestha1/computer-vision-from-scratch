@@ -33,3 +33,7 @@ Models with overlapping poolings are slightly more difficult to overfit during t
 - **FC1 layer**       : 256*5*5 input to 4096 out
 - **FC2 layer**       : 4096 input to 4096 out
 - **FC3 layer**       : 4096 input to 10 out 
+
+
+### Modified AlexNet for  the TinyImageNet Datasets
+TinyImageNet datasets has training images collection for **200** classes and the size of image is **64x64**. Thus it is required to modify the original architecture of AlexNet to train the TinyImageNet dataset.

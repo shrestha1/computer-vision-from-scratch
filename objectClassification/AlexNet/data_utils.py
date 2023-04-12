@@ -25,5 +25,5 @@ def valid_classes(train_path)->dict:
 
 
 if __name__ == '__main__':
-    path = './data/tiny-imagenet-200/train'
+    path = './data/tiny-imagenet-200/val'
     print(valid_classes(train_path=path))

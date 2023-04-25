@@ -88,4 +88,7 @@ def train():
             best_accuracy = accuracy
 
 if __name__ == "__main__":
-    train()
+    # train()
+    for image, label in train_dataloader:
+        print(image.shape, label)
+        break

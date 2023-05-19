@@ -97,6 +97,9 @@ class GoogleNet(nn.Module):
                                         )
     
     def forward(self, x):
+        return self.__forward(x)
+    
+    def __forward(self, x):
         y = self.conv_layer1(x)
         y = self.max_pool1(y)
         y = self.conv_layer2(y)
@@ -118,6 +121,7 @@ class GoogleNet(nn.Module):
         y = self.final_layer(y)
 
         return y
+    
     
 
 if __name__ =="__main__":

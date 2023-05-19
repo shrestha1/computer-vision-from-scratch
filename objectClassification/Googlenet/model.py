@@ -59,11 +59,11 @@ class InceptionBlock(nn.Module):
     
 
 class GoogleNet(nn.Module):
-    def __init__(self, in_channels, out_channels) -> None:
+    def __init__(self, inch_num, classes) -> None:
         super(GoogleNet, self).__init__()
 
         # initial layer initiate
-        self.conv_layer1 = ConvBlock(in_channels=in_channels, out_channels=64, kernel_size=(7,7), stride=2, padding=3)
+        self.conv_layer1 = ConvBlock(in_channels=inch_num, out_channels=64, kernel_size=(7,7), stride=2, padding=3)
         self.max_pool1 = nn.MaxPool2d(kernel_size=(3,3), stride=2, padding=1)
         self.conv_layer2 = nn.Sequential(ConvBlock(in_channels=64, out_channels=64, kernel_size=(1,1),stride=1, padding=0),
                                          ConvBlock(in_channels=64, out_channels=192, kernel_size=(3,3), stride=1, padding=1)
@@ -92,7 +92,7 @@ class GoogleNet(nn.Module):
         self.final_layer = nn.Sequential(nn.AvgPool2d(kernel_size=(7,7), stride=1),
                                          nn.Dropout(0.4),
                                          nn.Flatten(),
-                                        nn.Linear(in_features=1*1*1024, out_features=1000),
+                                        nn.Linear(in_features=1*1*1024, out_features=classes),
                                         nn.ReLU(inplace=True)
                                         )
     
